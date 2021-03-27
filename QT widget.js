@@ -25,7 +25,7 @@ const main = async () => {
   let widget = new ListWidget();
   widget.backgroundColor = new Color("#333");
   widget.url = source;
-  widget.refreshAfterDate = new Date(Date.now() + 1000 * 1 * 60);
+  widget.refreshAfterDate = new Date(Date.now() + 1000 * 60 * 60);
 
   let Stack1 = widget.addStack();
   Stack1.setPadding(5, 10, 5, 5);
