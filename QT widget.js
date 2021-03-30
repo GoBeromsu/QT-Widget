@@ -1,6 +1,3 @@
-// Variables used by Scriptable.
-// These must be at the very top of the file. Do not edit.
-// icon-color: deep-blue; icon-glyph: magic;
 const source = "http://nh.kccc.org/qt.html";
 let wv = new WebView();
 wv.loadURL(source);
@@ -32,6 +29,7 @@ const main = async () => {
 
   let widgetName = Stack1.addText(" 오늘의 QT");
   widgetName.font = Font.blackMonospacedSystemFont(10);
+  widgetName.textColor = Color.white()
 
   let Stack2 = widget.addStack();
   Stack2.layoutHorizontally();
@@ -40,12 +38,14 @@ const main = async () => {
   let bibTitle = Stack2.addText(bibArray[0].toString());
   bibTitle.font = Font.blackMonospacedSystemFont(17);
   bibTitle.centerAlignText();
+  bibTitle.textColor = Color.white()
 
   let Stack3 = widget.addStack();
   Stack3.setPadding(5, 5, 5, 5);
 
   let bibDest = Stack3.addText(bibArray[1].toString());
   bibDest.font = Font.blackMonospacedSystemFont(14);
+  bibDest.textColor = Color.white()
 
   return widget;
 };
